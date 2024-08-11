@@ -26,6 +26,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
                 lblResult.text=String(result)
             }
         }
+        
     }
     
     @IBAction func btnMinus(_ sender: Any) {
