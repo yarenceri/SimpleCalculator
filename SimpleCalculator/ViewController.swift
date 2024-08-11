@@ -7,13 +7,54 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-
+class ViewController: UIViewController, UITextFieldDelegate {
+    var result=0
+    @IBOutlet weak var txtFirstNumber: UITextField!
+    @IBOutlet weak var txtSecondNumber: UITextField!
+    @IBOutlet weak var lblResult: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
     }
 
 
+    @IBAction func btnSum(_ sender: Any) {
+        if let firstNumber=Int(txtFirstNumber.text!){
+            if let secondNumber=Int(txtSecondNumber.text!){
+                result=firstNumber+secondNumber
+                lblResult.text=String(result)
+            }
+        }
+      
+        
+    }
+    
+    @IBAction func btnMinus(_ sender: Any) {
+        if let firstNumber=Int(txtFirstNumber.text!){
+            if let secondNumber=Int(txtSecondNumber.text!){
+                result=firstNumber-secondNumber
+                lblResult.text=String(result)
+            }
+        }
+    }
+    
+    @IBAction func btnMultiply(_ sender: Any) {
+        if let firstNumber=Int(txtFirstNumber.text!){
+            if let secondNumber=Int(txtSecondNumber.text!){
+                result=firstNumber*secondNumber
+                lblResult.text=String(result)
+            }
+        }
+    }
+    
+    @IBAction func btnDivided(_ sender: Any) {
+        if let firstNumber=Int(txtFirstNumber.text!){
+            if let secondNumber=Int(txtSecondNumber.text!){
+                result=firstNumber/secondNumber
+                lblResult.text=String(result)
+            }
+        }
+    }
 }
 
